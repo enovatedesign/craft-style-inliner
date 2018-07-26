@@ -1,3 +1,9 @@
+## 1.1.1 - 2018-07-16
+
+### Fixed
+
+- Fixed a bug where unwanted slashes could be added to the critical CSS file paths.
+
 ## 1.1.0 - 2018-07-16
 
 ### Added
