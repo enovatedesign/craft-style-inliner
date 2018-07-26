@@ -1,7 +1,7 @@
 {
   "name": "enovatedesign/craft-style-inliner",
   "description": "Inline CSS for email templates in twig.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "type": "craft-plugin",
   "minimum-stability": "dev",
   "require": {
