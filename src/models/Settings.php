@@ -19,7 +19,7 @@ use craft\base\Model;
 class Settings extends Model
 {
     /**
-     * @var string The path prefix (after the document root) for critical CSS files
+     * @var string The path prefix for critical CSS files
      */
-    public $criticalPrefix = '@webroot';
+    public $criticalPrefix = '@webroot/';
 }
