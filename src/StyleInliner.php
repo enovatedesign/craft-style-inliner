@@ -7,6 +7,7 @@
 
 namespace enovatedesign\styleinliner;
 
+use enovatedesign\styleinliner\models\Settings;
 use enovatedesign\styleinliner\twigextensions\StyleInlinerTwigExtension;
 
 use Craft;
@@ -44,6 +45,11 @@ class StyleInliner extends Plugin
         self::$plugin = $this;
 
         Craft::$app->getView()->getTwig()->addExtension(new StyleInlinerTwigExtension());
+    }
+
+    protected function createSettingsModel()
+    {
+        return new Settings();
     }
 
 }

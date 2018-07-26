@@ -7,9 +7,12 @@
 
 namespace enovatedesign\styleinliner\services;
 
-use TijsVerkoyen\CssToInlineStyles\CssToInlineStyles;
-
+use Craft;
 use craft\base\Component;
+use enovatedesign\styleinliner\StyleInliner;
+use TijsVerkoyen\CssToInlineStyles\CssToInlineStyles;
+use function file_get_contents;
+use function rtrim;
 
 /**
  * Class StyleInlinerService
@@ -29,6 +32,10 @@ class StyleInlinerService extends Component
     private $_service;
 
     /**
+     * @var array
+     */
+    private $_criticalPaths = [];
+    /**
      * @inheritdoc
      */
     public function init()
@@ -47,5 +54,34 @@ class StyleInlinerService extends Component
     public function inlineCss($html, $css = null)
     {
         return $this->_service->convert($html, $css);
+    }
+
+    /**
+     * Inlines an entire CSS file into the <head> of the document.
+     *
+     * @param $path
+     * @throws \yii\base\ExitException
+     *
+     * @return null
+     */
+    public function criticalCss($path)
+    {
+        if (in_array($path, $this->_criticalPaths)) {
+            return;
+        }
+
+        $settings = StyleInliner::$plugin->getSettings();
+
+        $fullPath = join('/', [
+            trim(Craft::getAlias($settings->criticalPrefix), '/'),
+            trim($path, '/')
+        ]).'.css';
+
+        if (file_exists($fullPath)) {
+            $content = @file_get_contents($fullPath);
+            $this->_criticalPaths[] = $path;
+
+            Craft::$app->getView()->registerCss($content, [], 'critical');
+        }
     }
 }
