@@ -21,5 +21,5 @@ class Settings extends Model
     /**
      * @var string The path prefix (after the document root) for critical CSS files
      */
-    public $criticalPrefix = '';
+    public $criticalPrefix = '@webroot';
 }
