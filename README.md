@@ -26,6 +26,8 @@ composer require enovatedesign/craft-style-inliner
 
 ## Usage
 
+### Inline CSS
+
 Use the `{% inlinecss %}{% endinlinecss %}` tag pair in your templates.
 
 Input:
@@ -61,4 +63,27 @@ Output:
         <h1 style="color: red;">Hello, world!</h1>
     </body>
 </html>
+```
+
+### Critical CSS
+
+You can inline entire local CSS files in to the `<head>` of a document
+with the `{% criticalcss %}` twig tag.
+
+```twig
+{% extends "_layout.twig" %}
+
+{% criticalcss 'home' %}
+```
+
+The `.css` extension is added automatically. By default the plugin
+prefixes the `@webroot` alias, but this can be configured in a config file:
+
+`/config/style-inliner.php`
+```php
+<?php
+
+return [
+    'criticalPrefix' => '@webroot/resources/',
+];
 ```
