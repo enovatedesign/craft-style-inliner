@@ -28,6 +28,7 @@ class StyleInlinerTwigExtension extends Twig_Extension
     {
         return [
             new InlineCssTokenParser(),
+            new CriticalCssTokenParser(),
         ];
     }
 }
