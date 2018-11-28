@@ -77,13 +77,15 @@ with the `{% criticalcss %}` twig tag.
 ```
 
 The `.css` extension is added automatically. By default the plugin
-prefixes the `@webroot/` alias, but this can be configured in a config file:
+prefixes the `@webroot/` alias, but this can be configured in a config file.
+You can also switch critical CSS on and off entirely for each environment:
 
 `/config/style-inliner.php`
 ```php
 <?php
 
 return [
+    'criticalCss' => true,
     'criticalPrefix' => '@webroot/resources/',
 ];
 ```

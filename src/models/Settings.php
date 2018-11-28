@@ -22,4 +22,6 @@ class Settings extends Model
      * @var string The path prefix for critical CSS files
      */
     public $criticalPrefix = '@webroot/';
+
+    public $criticalCss = true;
 }
