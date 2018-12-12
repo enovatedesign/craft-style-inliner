@@ -44,7 +44,7 @@ class StyleInliner extends Plugin
 
         self::$plugin = $this;
 
-        Craft::$app->getView()->getTwig()->addExtension(new StyleInlinerTwigExtension());
+        Craft::$app->getView()->registerTwigExtension(new StyleInlinerTwigExtension());
     }
 
     protected function createSettingsModel()
