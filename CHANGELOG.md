@@ -1,3 +1,13 @@
+## 1.1.2 - 2018-11-12
+
+### Added
+
+- Critical CSS can be switched on/off for each environment using the plugin configuration file
+
+### Fixed
+
+- Fixed an issue that could occur when switching template modes during a request.
+
 ## 1.1.1.1 - 2018-07-16
 
 ### Fixed
