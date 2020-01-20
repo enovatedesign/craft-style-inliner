@@ -7,6 +7,7 @@
 
 namespace enovatedesign\styleinliner\twigextensions;
 
+use enovatedesign\styleinliner\StyleInliner;
 use Twig_Extension;
 use Twig_TokenParserInterface;
 
@@ -31,4 +32,10 @@ class StyleInlinerTwigExtension extends Twig_Extension
             new CriticalCssTokenParser(),
         ];
     }
+
+    public function printcriticalcss($key)
+    {
+        return StyleInliner::$plugin->styleInliner->printCriticalCss($key);
+    }
+
 }

@@ -21,16 +21,18 @@ class CriticalCssNode extends \Twig_Node
 {
     public function compile(\Twig_Compiler $compiler)
     {
+
         if (!StyleInliner::$plugin->getSettings()->criticalCss) {
             return;
         }
+
 
         $value = $this->getNode('value');
 
         $compiler->addDebugInfo($this);
 
         $compiler
-            ->write(StyleInliner::class."::\$plugin->styleInliner->criticalCss(")
+            ->write(StyleInliner::class . "::\$plugin->styleInliner->criticalCss(")
             ->subcompile($value)
             ->write(");");
     }
