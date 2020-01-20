@@ -34,6 +34,7 @@ class StyleInlinerService extends Component
      * @var array
      */
     private $_criticalFilenames = [];
+
     /**
      * @inheritdoc
      */
@@ -59,9 +60,9 @@ class StyleInlinerService extends Component
      * Inlines an entire CSS file into the <head> of the document.
      *
      * @param $filename
+     * @return null
      * @throws \yii\base\ExitException
      *
-     * @return null
      */
     public function criticalCss($filename)
     {
@@ -70,13 +71,42 @@ class StyleInlinerService extends Component
         }
 
         $settings = StyleInliner::$plugin->getSettings();
-
         $fullPath = Craft::getAlias($settings->criticalPrefix . $filename . '.css');
-
-        if (file_exists($fullPath) && $content = @file_get_contents($fullPath)) {
+        if (file_exists($fullPath) && $content .= @file_get_contents($fullPath)) {
             $this->_criticalFilenames[] = $filename;
-
             Craft::$app->getView()->registerCss($content, [], 'critical');
         }
     }
+
+    /**
+     * Inlines an entire CSS file wherever you specify it
+     *
+     * e.g: {{  craft.styleinliner.printcriticalcss('fullwidth') | raw }}
+     *
+     * @param $filename
+     * @return string
+     * @throws \yii\base\ExitException
+     *
+     */
+    public function printCriticalCss($filename)
+    {
+        if (in_array($filename, $this->_criticalFilenames)) {
+            return;
+        }
+
+        $settings = StyleInliner::$plugin->getSettings();
+        $fullPath = Craft::getAlias($settings->criticalPrefix . $filename . '.css');
+        $content = '<style>';
+        $contents = @file_get_contents($fullPath);
+
+        if (file_exists($fullPath) && $contents) {
+            $content .= $contents;
+            $this->_criticalFilenames[] = $filename;
+            $content .= '</style>';
+            return $content;
+        }
+
+        return '';
+    }
+
 }
