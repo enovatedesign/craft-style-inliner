@@ -1,3 +1,8 @@
+## 1.2.0 - 2020-01-20
+
+### Added
+- Critical CSS can now be printed anywhere via `{{ craft.styleinliner.printcriticalcss('fullwidth') | raw }}` 
+
 ## 1.1.2 - 2018-11-12
 
 ### Added
