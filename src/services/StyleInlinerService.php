@@ -72,7 +72,7 @@ class StyleInlinerService extends Component
 
         $settings = StyleInliner::$plugin->getSettings();
         $fullPath = Craft::getAlias($settings->criticalPrefix . $filename . '.css');
-        if (file_exists($fullPath) && $content .= @file_get_contents($fullPath)) {
+        if (file_exists($fullPath) && $content = @file_get_contents($fullPath)) {
             $this->_criticalFilenames[] = $filename;
             Craft::$app->getView()->registerCss($content, [], 'critical');
         }
