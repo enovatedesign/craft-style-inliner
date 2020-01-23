@@ -1,3 +1,9 @@
+## 1.2.1 - 2020-01-20
+
+### Fixed
+
+- Missing `$content` variable fixed 
+
 ## 1.2.0 - 2020-01-20
 
 ### Added
