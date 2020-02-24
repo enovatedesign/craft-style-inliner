@@ -1,3 +1,11 @@
+## 2.0.0 - 2020-02-24
+
+### Fixed
+
+- Updated packages to resolve [vulnerability](https://github.com/advisories/GHSA-gf8j-v8x5-h9qp) in `enshrined/svg-sanitize`.
+
+**Craft 3.4.0 is now a minimal requirement.**
+
 ## 1.2.1 - 2020-01-23
 
 ### Fixed

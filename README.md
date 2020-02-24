@@ -4,7 +4,9 @@
 
 ## Requirements
 
-This plugin requires Craft CMS 3.0.0 or later.
+This plugin requires Craft CMS 3.4.0 or later.
+
+For compatibility with Craft 3, prior to 3.4.0. Please use [version 1](https://github.com/enovatedesign/craft-style-inliner/releases). 
 
 ## Installation
 
