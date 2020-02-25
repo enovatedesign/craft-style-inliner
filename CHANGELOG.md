@@ -1,3 +1,9 @@
+## 2.0.1 - 2020-02-26
+
+### Fixed
+
+- Updated composer.lock to replicate changes made in composer.json for v2.0.0.
+
 ## 2.0.0 - 2020-02-24
 
 ### Fixed
