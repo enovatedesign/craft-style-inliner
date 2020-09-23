@@ -1,3 +1,9 @@
+## 2.1.0 - 2020-09-23
+
+### Fixed
+
+- Require a minimum of Craft CMS 3.5.10 to ensure Yii version is 2.0.38 and above. Resolves [vulnerability](https://github.com/advisories/GHSA-699q-wcff-g9mj).
+
 ## 2.0.1 - 2020-02-26
 
 ### Fixed
