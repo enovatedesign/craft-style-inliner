@@ -6,9 +6,9 @@
   "minimum-stability": "dev",
   "license": "MIT",
   "require": {
-    "craftcms/cms": "^3.5.10",
     "tijsverkoyen/css-to-inline-styles": "^2.2@dev",
-    "enshrined/svg-sanitize": "^0.13.2"
+    "enshrined/svg-sanitize": "^0.13.2",
+    "craftcms/cms": "^3.5.10"
   },
   "autoload": {
     "psr-4": {
