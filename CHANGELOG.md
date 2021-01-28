@@ -1,3 +1,11 @@
+## 2.2.0 - 2021-01-28
+
+### Fixed
+
+- Upgrade svg-sanitize to fix Craft CMS 3.6 compatibility.
+
+**Craft 3.6.0 is now a minimal requirement.**
+
 ## 2.1.0 - 2020-09-23
 
 ### Fixed
