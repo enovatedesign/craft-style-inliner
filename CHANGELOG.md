@@ -1,3 +1,11 @@
+## 2.3.0 - 2021-04-30
+
+### Fixed
+
+- Require minimum of Craft CMS 3.6.12.1 to address `composer/composer` [vulnerability](https://github.com/composer/composer/security/advisories/GHSA-h5h8-pc6h-jvvx).
+
+**Craft 3.6.12.1 is now a minimal requirement.**
+
 ## 2.2.0 - 2021-01-28
 
 ### Fixed
