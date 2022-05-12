@@ -49,14 +49,14 @@ class StyleInliner extends Plugin
         self::$plugin = $this;
 
         Craft::$app->getView()->registerTwigExtension(new StyleInlinerTwigExtension());
-//
-//        Event::on(CraftVariable::class, CraftVariable::EVENT_INIT, function (Event $e) {
-//            /** @var CraftVariable $variable */
-//            $variable = $e->sender;
-//
-//            // Attach a service:
-//            $variable->set('styleinliner', StyleInlinerTwigExtension::class);
-//        });
+
+        Event::on(CraftVariable::class, CraftVariable::EVENT_INIT, function (Event $e) {
+            /** @var CraftVariable $variable */
+            $variable = $e->sender;
+
+            // Attach a service:
+            $variable->set('styleinliner', StyleInlinerTwigExtension::class);
+        });
 
     }
 
