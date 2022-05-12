@@ -1,6 +1,6 @@
 <?php
 /**
- * Style Inliner Plugin for Craft CMS 3
+ * Style Inliner Plugin for Craft CMS 4
  *
  * @copyright Copyright 2018 Enovate Design Ltd.
  */
@@ -28,17 +28,17 @@ class StyleInlinerService extends Component
     /**
      * @var CssToInlineStyles
      */
-    private $_service;
+    private CssToInlineStyles $_service;
 
     /**
      * @var array
      */
-    private $_criticalFilenames = [];
+    private array $_criticalFilenames = [];
 
     /**
      * @inheritdoc
      */
-    public function init()
+    public function init() : void
     {
         $this->_service = new CssToInlineStyles();
     }
@@ -51,7 +51,7 @@ class StyleInlinerService extends Component
      *
      * @return string
      */
-    public function inlineCss($html, $css = null)
+    public function inlineCss($html, $css = null): string
     {
         return $this->_service->convert($html, $css);
     }
@@ -60,11 +60,11 @@ class StyleInlinerService extends Component
      * Inlines an entire CSS file into the <head> of the document.
      *
      * @param $filename
-     * @return null
+     *
      * @throws \yii\base\ExitException
      *
      */
-    public function criticalCss($filename)
+    public function criticalCss($filename) : void
     {
         if (in_array($filename, $this->_criticalFilenames)) {
             return;
@@ -88,10 +88,10 @@ class StyleInlinerService extends Component
      * @throws \yii\base\ExitException
      *
      */
-    public function printCriticalCss($filename)
+    public function printCriticalCss($filename): string
     {
         if (in_array($filename, $this->_criticalFilenames)) {
-            return;
+            return '';
         }
 
         $settings = StyleInliner::$plugin->getSettings();

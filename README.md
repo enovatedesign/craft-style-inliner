@@ -1,10 +1,10 @@
-# Craft 3 Style Inliner Plugin
+# Craft 4 Style Inliner Plugin
 
 > A Twig tag for inlining styles in a template.
 
 ## Requirements
 
-This plugin requires Craft CMS 3.7.33 or later.
+This plugin requires Craft CMS 4.0.2 or later.
 
 ## Installation
 

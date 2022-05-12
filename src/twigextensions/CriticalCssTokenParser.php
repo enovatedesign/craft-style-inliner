@@ -1,14 +1,14 @@
 <?php
 /**
- * Style Inliner Plugin for Craft CMS 3
+ * Style Inliner Plugin for Craft CMS 4
  *
  * @copyright Copyright 2018 Enovate Design Ltd.
  */
 
 namespace enovatedesign\styleinliner\twigextensions;
 
-use Twig_Token;
-use Twig_TokenParser;
+
+use Twig\Token;
 
 /**
  * Class CriticalCssTokenParser
@@ -17,7 +17,7 @@ use Twig_TokenParser;
  * @package StyleInliner
  * @since 1.1.0
  */
-class CriticalCssTokenParser extends Twig_TokenParser
+class CriticalCssTokenParser extends \Twig\TokenParser\AbstractTokenParser
 {
     /**
      * @return string
@@ -27,7 +27,7 @@ class CriticalCssTokenParser extends Twig_TokenParser
         return 'criticalcss';
     }
 
-    public function parse(Twig_Token $token): CriticalCssNode
+    public function parse(Token $token): CriticalCssNode
     {
         $lineno = $token->getLine();
         $stream = $this->parser->getStream();
@@ -35,7 +35,7 @@ class CriticalCssTokenParser extends Twig_TokenParser
         $nodes = [];
 
         $nodes['value'] = $expressionParser->parseExpression();
-        $stream->expect(Twig_Token::BLOCK_END_TYPE);
+        $stream->expect(Token::BLOCK_END_TYPE);
 
         return new CriticalCssNode($nodes, [], $lineno, $this->getTag());
     }

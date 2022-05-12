@@ -1,6 +1,6 @@
 <?php
 /**
- * Style Inliner Plugin for Craft CMS 3
+ * Style Inliner Plugin for Craft CMS 4
  *
  * @copyright Copyright 2018 Enovate Design Ltd.
  */
@@ -8,6 +8,8 @@
 namespace enovatedesign\styleinliner\twigextensions;
 
 use enovatedesign\styleinliner\StyleInliner;
+use Twig\Compiler;
+use Twig\Node\Node;
 
 /**
  * Class InlineCssNode
@@ -16,12 +18,12 @@ use enovatedesign\styleinliner\StyleInliner;
  * @package StyleInliner
  * @since 1.0.0
  */
-class InlineCssNode extends \Twig_Node
+class InlineCssNode extends Node
 {
     /**
-     * @param \Twig_Compiler $compiler
+     * @param Compiler $compiler
      */
-    public function compile(\Twig_Compiler $compiler)
+    public function compile(Compiler $compiler)
     {
         $compiler
             ->write("ob_start();\n")

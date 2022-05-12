@@ -1,6 +1,6 @@
 <?php
 /**
- * Style Inliner Plugin for Craft CMS 3
+ * Style Inliner Plugin for Craft CMS 4
  *
  * @copyright Copyright 2018 Enovate Design Ltd.
  */
@@ -18,7 +18,7 @@ use Twig_TokenParserInterface;
  * @package StyleInliner
  * @since 1.0.0
  */
-class StyleInlinerTwigExtension extends Twig_Extension
+class StyleInlinerTwigExtension extends \Twig\Extension\AbstractExtension
 {
     /**
      * Returns the token parser instances to add to the existing list.

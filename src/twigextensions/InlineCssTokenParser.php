@@ -1,15 +1,14 @@
 <?php
 /**
- * Style Inliner Plugin for Craft CMS 3
+ * Style Inliner Plugin for Craft CMS 4
  *
  * @copyright Copyright 2018 Enovate Design Ltd.
  */
 
 namespace enovatedesign\styleinliner\twigextensions;
 
-use Twig_Node;
-use Twig_Token;
-use Twig_TokenParser;
+use Twig\Error\SyntaxError;
+use Twig\Token;
 
 /**
  * Class InlineCssTokenParser
@@ -18,7 +17,7 @@ use Twig_TokenParser;
  * @package StyleInliner
  * @since 1.0.0
  */
-class InlineCssTokenParser extends Twig_TokenParser
+class InlineCssTokenParser extends \Twig\TokenParser\AbstractTokenParser
 {
     /**
      * @return string
@@ -29,26 +28,27 @@ class InlineCssTokenParser extends Twig_TokenParser
     }
 
     /**
-     * @param Twig_Token $token
+     * @param  Token  $token
      *
      * @return bool
      */
-    public function decideInlineCssEnd(Twig_Token $token)
+    public function decideInlineCssEnd(Token $token): bool
     {
         return $token->test('endinlinecss');
     }
 
     /**
-     * @param Twig_Token $token
+     * @param  Token  $token
      *
-     * @return InlineCssNode|Twig_Node
+     * @return InlineCssNode
+     * @throws SyntaxError
      */
-    public function parse(Twig_Token $token): InlineCssNode
+    public function parse(Token $token): InlineCssNode
     {
         $stream = $this->parser->getStream();
-        $stream->expect(Twig_Token::BLOCK_END_TYPE);
+        $stream->expect(Token::BLOCK_END_TYPE);
         $body = $this->parser->subparse([$this, 'decideInlineCssEnd'], true);
-        $stream->expect(Twig_Token::BLOCK_END_TYPE);
+        $stream->expect(Token::BLOCK_END_TYPE);
 
         return new InlineCssNode(['body' => $body], [], $token->getLine(), $this->getTag());
     }
