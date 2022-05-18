@@ -1,6 +1,6 @@
 <?php
 /**
- * Style Inliner Plugin for Craft CMS 3
+ * Style Inliner Plugin for Craft CMS 4
  *
  * @copyright Copyright 2018 Enovate Design Ltd.
  */
@@ -12,6 +12,7 @@ use enovatedesign\styleinliner\twigextensions\StyleInlinerTwigExtension;
 
 use Craft;
 use craft\base\Plugin;
+use craft\base\Model;
 use craft\web\twig\variables\CraftVariable;
 
 use yii\base\Event;
@@ -59,7 +60,7 @@ class StyleInliner extends Plugin
 
     }
 
-    protected function createSettingsModel()
+    protected function createSettingsModel():?Model
     {
         return new Settings();
     }

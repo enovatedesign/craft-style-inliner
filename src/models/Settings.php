@@ -1,6 +1,6 @@
 <?php
 /**
- * Style Inliner Plugin for Craft CMS 3
+ * Style Inliner Plugin for Craft CMS 4
  *
  * @copyright Copyright 2018 Enovate Design Ltd.
  */
@@ -21,7 +21,7 @@ class Settings extends Model
     /**
      * @var string The path prefix for critical CSS files
      */
-    public $criticalPrefix = '@webroot/';
+    public string $criticalPrefix = '@webroot/';
 
-    public $criticalCss = true;
+    public bool $criticalCss = true;
 }
