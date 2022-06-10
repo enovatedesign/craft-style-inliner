@@ -10,7 +10,7 @@
     "enshrined/svg-sanitize": "^0.15.2",
     "craftcms/cms": "^4.0.2",
     "php": "^8.0.0",
-    "guzzlehttp/guzzle": "^7.4.3"
+    "guzzlehttp/guzzle": "^7.4.4"
   },
   "autoload": {
     "psr-4": {
