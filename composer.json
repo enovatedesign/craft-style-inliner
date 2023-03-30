@@ -1,34 +1,34 @@
 {
-  "name": "enovatedesign/craft-style-inliner",
-  "description": "Inline & critical CSS tags for email templates in twig.",
-  "version": "2.4.0",
-  "type": "craft-plugin",
-  "minimum-stability": "dev",
-  "license": "MIT",
-  "require": {
-    "tijsverkoyen/css-to-inline-styles": "^2.2@dev",
-    "enshrined/svg-sanitize": "^0.15.2",
-    "craftcms/cms": "^3.7.33"
-  },
-  "autoload": {
-    "psr-4": {
-      "enovatedesign\\styleinliner\\": "src/"
-    }
-  },
-  "support": {
-    "issues": "https://github.com/enovatedesign/craft-style-inliner/issues"
-  },
-  "extra": {
-    "name": "Style Inliner",
-    "handle": "style-inliner",
-    "developer": "Enovate Design",
-    "developerUrl": "https://www.enovate.co.uk",
-    "hasCpSettings": false,
-    "hasCpSection": false,
-    "changelogUrl": "https://raw.githubusercontent.com/enovatedesign/craft-style-inliner/master/CHANGELOG.md",
-    "components": {
-      "styleInliner": "enovatedesign\\styleinliner\\services\\StyleInlinerService"
+    "name": "enovatedesign/craft-style-inliner",
+    "description": "Inline & critical CSS tags for email templates in twig.",
+    "version": "2.5.0",
+    "type": "craft-plugin",
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "require": {
+        "tijsverkoyen/css-to-inline-styles": "^2.2@dev",
+        "enshrined/svg-sanitize": "^0.16.0",
+        "craftcms/cms": "^3.8.5"
     },
-    "class": "enovatedesign\\styleinliner\\StyleInliner"
-  }
+    "autoload": {
+        "psr-4": {
+            "enovatedesign\\styleinliner\\": "src/"
+        }
+    },
+    "support": {
+        "issues": "https://github.com/enovatedesign/craft-style-inliner/issues"
+    },
+    "extra": {
+        "name": "Style Inliner",
+        "handle": "style-inliner",
+        "developer": "Enovate Design",
+        "developerUrl": "https://www.enovate.co.uk",
+        "hasCpSettings": false,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/enovatedesign/craft-style-inliner/master/CHANGELOG.md",
+        "components": {
+            "styleInliner": "enovatedesign\\styleinliner\\services\\StyleInlinerService"
+        },
+        "class": "enovatedesign\\styleinliner\\StyleInliner"
+    }
 }
