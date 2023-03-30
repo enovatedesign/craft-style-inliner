@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Style Inliner Plugin for Craft CMS 4
  *
@@ -10,6 +11,7 @@ namespace enovatedesign\styleinliner\twigextensions;
 use Craft;
 use enovatedesign\styleinliner\StyleInliner;
 use Twig\Node\Node;
+use Twig\Compiler;
 
 /**
  * Class CriticalCssNode
@@ -20,7 +22,7 @@ use Twig\Node\Node;
  */
 class CriticalCssNode extends Node
 {
-    public function compile(\Twig_Compiler $compiler)
+    public function compile(Compiler $compiler)
     {
 
         if (!StyleInliner::$plugin->getSettings()->criticalCss) {
@@ -38,3 +40,4 @@ class CriticalCssNode extends Node
             ->write(");");
     }
 }
+
