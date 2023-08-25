@@ -1,42 +1,42 @@
 {
-    "name": "enovatedesign/craft-style-inliner",
-    "description": "Inline & critical CSS tags for email templates in twig.",
-    "version": "3.0.3",
-    "type": "craft-plugin",
-    "minimum-stability": "dev",
-    "license": "MIT",
-    "require": {
-        "tijsverkoyen/css-to-inline-styles": "^2.2@dev",
-        "enshrined/svg-sanitize": "^0.16.0",
-        "craftcms/cms": "^4.0",
-        "php": "^8.0.0",
-        "guzzlehttp/guzzle": "^7.4.4"
-    },
-    "autoload": {
-        "psr-4": {
-            "enovatedesign\\styleinliner\\": "src/"
-        }
-    },
-    "support": {
-        "issues": "https://github.com/enovatedesign/craft-style-inliner/issues"
-    },
-    "extra": {
-        "name": "Style Inliner",
-        "handle": "style-inliner",
-        "developer": "Enovate Design",
-        "developerUrl": "https://www.enovate.co.uk",
-        "hasCpSettings": false,
-        "hasCpSection": false,
-        "changelogUrl": "https://raw.githubusercontent.com/enovatedesign/craft-style-inliner/master/CHANGELOG.md",
-        "components": {
-            "styleInliner": "enovatedesign\\styleinliner\\services\\StyleInlinerService"
-        },
-        "class": "enovatedesign\\styleinliner\\StyleInliner"
-    },
-    "config": {
-        "allow-plugins": {
-            "yiisoft/yii2-composer": true,
-            "craftcms/plugin-installer": true
-        }
+  "name": "enovatedesign/craft-style-inliner",
+  "description": "Inline & critical CSS tags for email templates in twig.",
+  "version": "3.0.5",
+  "type": "craft-plugin",
+  "minimum-stability": "dev",
+  "license": "MIT",
+  "require": {
+    "tijsverkoyen/css-to-inline-styles": "^2.2@dev",
+    "enshrined/svg-sanitize": "^0.16.0",
+    "craftcms/cms": "^4.0",
+    "php": "^8.0.0",
+    "guzzlehttp/guzzle": "^7.4.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "enovatedesign\\styleinliner\\": "src/"
     }
+  },
+  "support": {
+    "issues": "https://github.com/enovatedesign/craft-style-inliner/issues"
+  },
+  "extra": {
+    "name": "Style Inliner",
+    "handle": "style-inliner",
+    "developer": "Enovate Design",
+    "developerUrl": "https://www.enovate.co.uk",
+    "hasCpSettings": false,
+    "hasCpSection": false,
+    "changelogUrl": "https://raw.githubusercontent.com/enovatedesign/craft-style-inliner/master/CHANGELOG.md",
+    "components": {
+      "styleInliner": "enovatedesign\\styleinliner\\services\\StyleInlinerService"
+    },
+    "class": "enovatedesign\\styleinliner\\StyleInliner"
+  },
+  "config": {
+    "allow-plugins": {
+      "yiisoft/yii2-composer": true,
+      "craftcms/plugin-installer": true
+    }
+  }
 }
