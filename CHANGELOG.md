@@ -1,3 +1,9 @@
+# 4.0.0 - 2024-01-24
+
+### Updated
+
+- Compatibility update with Craft version 5.1.
+
 ## 2.4.0 - 2021-02-25
 
 ### Fixed
