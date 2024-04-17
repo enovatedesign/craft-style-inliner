@@ -1,3 +1,9 @@
+# 4.0.0 - 2024-04-04
+
+### Updated
+
+- Compatibility update with Craft version 5.1.
+
 ## 3.0.6 - 2023-08-25
 
 ### Fixed
@@ -127,4 +133,3 @@
 ### Added
 
 -   Adds an `{% inlinecss %}` Twig tag that inlines any CSS rules in the HTML.
-
