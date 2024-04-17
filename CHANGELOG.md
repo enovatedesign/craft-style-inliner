@@ -50,7 +50,6 @@
 
 **Craft 4.0.2 is now a minimal requirement.**
 
->>>>>>> 99c227fef4320e2f8dd5967279baabf06f5694e7
 ## 2.4.0 - 2021-02-25
 
 ### Fixed
