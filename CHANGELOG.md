@@ -1,4 +1,10 @@
-# 4.0.0 - 2024-04-17
+# 4.0.2 - 2024-04-17
+
+### Fixed
+
+- Fixed craftcms/cms dependency version with update to lock file.
+
+# 4.0.1 - 2024-04-17
 
 ### Fixed
 
