@@ -1,3 +1,9 @@
+# 4.1.1 - 2024-08-1
+
+### Fixed
+
+- Closes #22 to remove direct enshrined/svg-sanitize dependency as craft already depends on it.
+
 # 4.1.0 - 2024-06-24
 
 ### Fixed
