@@ -7,7 +7,6 @@
   "license": "MIT",
   "require": {
     "tijsverkoyen/css-to-inline-styles": "^2.2.7",
-    "enshrined/svg-sanitize": "^0.16.0",
     "craftcms/cms": "^5.2",
     "php": "^8.2.0",
     "guzzlehttp/guzzle": "^7.2.0"
