@@ -1,14 +1,14 @@
 {
     "name": "enovatedesign/craft-style-inliner",
     "description": "Inline & critical CSS tags for email templates in twig.",
-    "version": "3.0.6",
+    "version": "3.1.0",
     "type": "craft-plugin",
     "minimum-stability": "dev",
     "license": "MIT",
     "require": {
         "tijsverkoyen/css-to-inline-styles": "^2.2@dev",
-        "enshrined/svg-sanitize": "^0.16.0",
-        "craftcms/cms": "^4.0",
+        "enshrined/svg-sanitize": "^0.19.0",
+        "craftcms/cms": "^4.11.0",
         "php": "^8.0.0",
         "guzzlehttp/guzzle": "^7.4.4"
     },
