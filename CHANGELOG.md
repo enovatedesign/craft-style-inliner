@@ -1,3 +1,9 @@
+# 4.1.3 - 2025-03-12
+
+### Documentation
+
+- Minor Readme markdown formatting tweak.
+
 # 4.1.2 - 2025-03-12
 
 ### Documentation

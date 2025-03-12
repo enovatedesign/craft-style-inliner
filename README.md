@@ -87,4 +87,8 @@ return [
 ];
 ```
 
-For added flexibility the Critical CSS can be printed anywhere via `{{ craft.styleinliner.printcriticalcss('fullwidth') | raw }}`.
+For added flexibility the Critical CSS can be printed anywhere via:
+
+```twig
+{{ craft.styleinliner.printcriticalcss('fullwidth') | raw }}
+```
