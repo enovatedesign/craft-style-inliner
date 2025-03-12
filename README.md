@@ -1,10 +1,10 @@
-# Craft 4 Style Inliner Plugin
+# Craft 5 Style Inliner Plugin
 
 > A Twig tag for inlining styles in a template.
 
 ## Requirements
 
-This plugin requires Craft CMS 4.0.2 or later.
+This plugin requires Craft CMS 5.2 or later.
 
 ## Installation
 
@@ -22,7 +22,7 @@ cd /path/to/project
 composer require enovatedesign/craft-style-inliner
 ```
 
-3. In the Control Panel, go to Settings → Plugins and click the “Install” button for Style Inliner.
+3. Install the plugin via ./craft install/plugin enovatedesign/craft-style-inliner via the CLI, or in the Control Panel, go to Settings → Plugins and click the “Install” button for Style Inliner.
 
 ## Usage
 
@@ -36,7 +36,6 @@ Input:
 {% inlinecss %}
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <style type="text/css">
             h1 { color: red }
         </style>
@@ -51,10 +50,8 @@ Input:
 Output:
 
 ```twig
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <style type="text/css">
             h1 { color:red }
         </style>
@@ -89,3 +86,5 @@ return [
     'criticalPrefix' => '@webroot/resources/',
 ];
 ```
+
+For added flexibility the Critical CSS can be printed anywhere via `{{ craft.styleinliner.printcriticalcss('fullwidth') | raw }}`.

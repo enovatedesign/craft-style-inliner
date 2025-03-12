@@ -1,3 +1,10 @@
+# 4.1.2 - 2025-03-12
+
+### Documentation
+
+- Closes #25 to update Readme with details of how to output Critical CSS anywhere needed.
+- Update dependencies
+
 # 4.1.1 - 2024-08-1
 
 ### Fixed
