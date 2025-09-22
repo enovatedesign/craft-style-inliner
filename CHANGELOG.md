@@ -1,3 +1,10 @@
+## 3.1.1 - 2025-08-18
+
+### Changed
+
+-   Update `enshrined/svg-sanitize` constraint to be compatible with Craft 4.16.11.
+-   Now requires Craft `^4.16.11`.
+
 ## 3.1.0 - 2024-08-07
 
 ### Changed
